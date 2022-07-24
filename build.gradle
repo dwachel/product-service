@@ -1,0 +1,35 @@
+plugins {
+	id 'org.springframework.boot' version '2.7.1'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'com.demo'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation "com.squareup.okhttp3:okhttp:4.10.0"
+	implementation "com.squareup.okhttp3:logging-interceptor"
+	implementation 'dev.failsafe:failsafe:3.2.4'
+	implementation 'dev.failsafe:failsafe-okhttp:3.2.4'
+	implementation "org.slf4j:slf4j-api:1.7.36"
+	implementation 'org.mapstruct:mapstruct:1.5.2.Final'
+
+	compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.24'
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation group: 'com.github.tomakehurst', name: 'wiremock-jre8', version: '2.33.2'
+
+	annotationProcessor 'org.projectlombok:lombok:1.18.24'
+	annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.2.Final'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
