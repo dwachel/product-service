@@ -1,8 +1,5 @@
 package com.demo.ppv.product.domain.model.constraint;
 
-import com.demo.ppv.product.domain.model.constraint.Constraint;
-import com.demo.ppv.product.domain.model.constraint.Predicate;
-import com.demo.ppv.product.domain.model.constraint.PrivilegePredicate;
 import org.jetbrains.annotations.NotNull;
 import org.junit.jupiter.api.Test;
 
